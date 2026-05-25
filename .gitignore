@@ -1,0 +1,87 @@
+# =============================================================================
+# AttendanceSystem — .gitignore
+# Backend: Python / FastAPI / PostgreSQL
+# Frontend: React / Vite / Tailwind
+# =============================================================================
+
+# ── Environment & Secrets ────────────────────────────────────────────────────
+.env
+.env.*
+!.env.example
+
+# ── Python ───────────────────────────────────────────────────────────────────
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.so
+*.egg
+*.egg-info/
+dist/
+build/
+.eggs/
+.Python
+pip-log.txt
+pip-delete-this-directory.txt
+
+# Virtual environments
+venv/
+.venv/
+env/
+.env/
+ENV/
+
+# Pytest / coverage
+.pytest_cache/
+.coverage
+htmlcov/
+.tox/
+
+# MyPy
+.mypy_cache/
+.dmypy.json
+
+# ── ML / Face Recognition Data ───────────────────────────────────────────────
+# Trained encodings (regenerated at runtime)
+backend/data/encodings.pkl
+
+# Uploaded student face images (user data — do not commit)
+backend/data/students/
+
+# Keep the data directory itself
+!backend/data/.gitkeep
+
+# ── Node / Frontend ──────────────────────────────────────────────────────────
+node_modules/
+frontend/node_modules/
+
+# Vite build output
+frontend/dist/
+frontend/.vite/
+
+# Dependency lock files (keep package-lock.json but ignore yarn/pnpm if unused)
+# Uncomment the line below only if you switch to yarn or pnpm:
+# frontend/package-lock.json
+
+# ── Logs ─────────────────────────────────────────────────────────────────────
+*.log
+logs/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# ── OS & Editor ──────────────────────────────────────────────────────────────
+.DS_Store
+Thumbs.db
+desktop.ini
+
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# ── Misc ─────────────────────────────────────────────────────────────────────
+*.bak
+*.tmp
