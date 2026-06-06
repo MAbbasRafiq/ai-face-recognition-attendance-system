@@ -190,7 +190,7 @@ function StudentRow({ item, subject, rank }) {
             userSelect: "none"
           }}
         >
-          {expanded ? "▲" : "▼"}
+          {expanded ? "^" : "v"}
         </td>
       </tr>
 
@@ -218,7 +218,7 @@ function StudentRow({ item, subject, rank }) {
                     padding: "12px 16px"
                   }}
                 >
-                  Loading records…
+                  Loading records...
                 </p>
               ) : detail.length === 0 ? (
                 <p
@@ -500,7 +500,7 @@ export default function DashboardPage() {
           onClick={handleSearch}
           disabled={loading}
         >
-          {loading ? "Loading…" : "Search"}
+          {loading ? "Loading..." : "Search"}
         </button>
 
         {error && (
@@ -597,7 +597,7 @@ export default function DashboardPage() {
                 background: "#16a34a"
               }}
             />
-            ≥ 75% — Good
+            &gt;= 75% - Good
           </span>
 
           <span
@@ -615,7 +615,7 @@ export default function DashboardPage() {
                 background: "#ca8a04"
               }}
             />
-            50–74% — Warning
+            50-74% - Warning
           </span>
 
           <span
@@ -633,7 +633,7 @@ export default function DashboardPage() {
                 background: "#dc2626"
               }}
             />
-            &lt; 50% — At Risk
+            &lt; 50% - At Risk
           </span>
         </div>
       )}
@@ -703,7 +703,7 @@ export default function DashboardPage() {
         summary.length > 0 && (
           <div className="card">
             <h2>
-              Student Attendance —{" "}
+              Student Attendance -{" "}
               {selectedSubject}
             </h2>
 

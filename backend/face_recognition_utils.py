@@ -100,12 +100,12 @@ def generate_encodings():
     return len(all_embeddings)
 
 
-def find_best_match(live_embedding, known_embeddings, known_names, threshold=1.2):
+def find_best_match(live_embedding, known_embeddings, known_names, threshold = 0.7):    
     """
     Compares a live face embedding against all stored embeddings.
     Returns the name of the closest match, or "Unknown" if no good match.
 
-    threshold: lower = stricter matching. 1.2 works well for FaceNet.
+    threshold: lower = stricter matching. 0.7 works well for FaceNet.
     """
     distances = np.linalg.norm(
         np.array(known_embeddings) - np.array(live_embedding),
